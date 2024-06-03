@@ -10,7 +10,7 @@ Class Movie {
     private string $genre;
     
      /** Avaliações */
-    private array $rates = [];
+    private array $rates;
 
     /** Construtor da classe filme */
     public function __construct(?int $id, string $name, ?int $release, string $genre)
@@ -19,6 +19,23 @@ Class Movie {
         $this->name = $name;
         $this->release = $release;
         $this->genre = $genre;
+        $this->rates = [];
+    }
+
+    /** Getters */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    public function getRelease(): ?int
+    {
+        return $this->release;
+    }
+
+    public function getGenre(): string
+    {
+        return $this->genre;
     }
 
     /** Recebe avaliações do Filme */
