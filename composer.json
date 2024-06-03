@@ -1,0 +1,16 @@
+{
+    "name": "oalves/php_poo",
+    "description": "Projeto de estudo de POO",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Locadora\\Poo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Osvaldo A. Neto"
+        }
+    ]
+}
