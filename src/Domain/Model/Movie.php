@@ -3,17 +3,16 @@
 namespace Locadora\Poo\Domain\Model;
 
 Class Movie {
-
-    private ?int $id;
-    private string $name;
-    private ?int $release;
-    private string $genre;
-    
      /** Avaliações */
     private array $rates;
 
     /** Construtor da classe filme */
-    public function __construct(?int $id, string $name, ?int $release, string $genre)
+    public function __construct(
+        private ?int $id,
+        private string $name,
+        private ?int $release,
+        private string $genre
+        )
     {
         $this->id = $id;
         $this->name = $name;
