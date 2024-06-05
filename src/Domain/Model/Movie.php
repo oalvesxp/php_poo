@@ -11,7 +11,7 @@ Class Movie {
         private ?int $id,
         private string $name,
         private ?int $release,
-        private string $genre
+        private Genre $genre
         )
     {
         $this->id = $id;
@@ -32,7 +32,7 @@ Class Movie {
         return $this->release;
     }
 
-    public function getGenre(): string
+    public function getGenre(): Genre
     {
         return $this->genre;
     }
