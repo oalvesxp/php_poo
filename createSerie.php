@@ -27,4 +27,4 @@ echo "Genêro: {$serie->getGenre()}" . PHP_EOL;
 echo "Recomendação: {$serie->average()}/10" . PHP_EOL;
 echo "Temporadas: {$serie->seasons}" . PHP_EOL;
 echo "Episódeos (p/ Temporada): {$serie->episodesPerSeason}" . PHP_EOL;
-echo "Média de Duração: {$serie->episodeDuration}" . PHP_EOL;
+echo "Média de Duração: {$serie->episodeDuration} Minutos" . PHP_EOL;
