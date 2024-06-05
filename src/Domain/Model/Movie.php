@@ -12,7 +12,8 @@ Class Movie
         private ?int $id,
         private string $name,
         private ?int $release,
-        private Genre $genre
+        private Genre $genre,
+        public readonly ?int $timeMin
         )
     {
         $this->id = $id;

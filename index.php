@@ -8,7 +8,8 @@ $filme = new Movie(
     null,
     'Spider-man 2',
     2004,
-    Genre::SuperHero
+    Genre::SuperHero,
+    127
 );
 
 $filme->rate(10);
@@ -22,3 +23,4 @@ echo PHP_EOL . "Nome: {$filme->getName()}" . PHP_EOL;
 echo "Ano de Lançamento: {$filme->getRelease()}" . PHP_EOL;
 echo "Genêro: {$filme->getGenre()}" . PHP_EOL;
 echo "Recomendação: {$filme->average()}/10" . PHP_EOL;
+echo "Duração: {$filme->timeMin} Minutos" . PHP_EOL;
