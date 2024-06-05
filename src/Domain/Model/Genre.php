@@ -2,10 +2,11 @@
 
 namespace Locadora\Poo\Domain\Model;
 
-enum Genre {
-    case Action;
-    case Comedy;
-    case Horror;
-    case SuperHero;
-    case Drama;
+enum Genre: string 
+{
+    case Action = 'Ação';
+    case Comedy = 'Comédia';
+    case Horror = 'Terror';
+    case SuperHero = 'Super-Herói';
+    case Drama = 'Drama';
 } 

@@ -18,7 +18,7 @@ $filme->rate(9.2);
 
 var_dump($filme);
 
-//echo "Nome: {$filme->getName()}" . PHP_EOL;
-//echo "Ano de Lançamento: {$filme->getRelease()}" . PHP_EOL;
-//echo "Genêro: {$filme->getGenre()}" . PHP_EOL;
-//echo "Recomendação: {$filme->average()}/10" . PHP_EOL;
+echo PHP_EOL . "Nome: {$filme->getName()}" . PHP_EOL;
+echo "Ano de Lançamento: {$filme->getRelease()}" . PHP_EOL;
+echo "Genêro: {$filme->getGenre()}" . PHP_EOL;
+echo "Recomendação: {$filme->average()}/10" . PHP_EOL;

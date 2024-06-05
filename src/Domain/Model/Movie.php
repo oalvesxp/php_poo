@@ -2,7 +2,8 @@
 
 namespace Locadora\Poo\Domain\Model;
 
-Class Movie {
+Class Movie 
+{
      /** Avaliações */
     private array $rates;
 
@@ -32,15 +33,15 @@ Class Movie {
         return $this->release;
     }
 
-    public function getGenre(): Genre
+    public function getGenre(): string
     {
-        return $this->genre;
+        return $this->genre->value;
     }
 
     /** Recebe avaliações do Filme */
-    public function rate(float $value): void
+    public function rate(float $grade): void
     {
-        $this->rates[] = $value;
+        $this->rates[] = $grade;
     }
 
     /** Calcula as avaliações do Filme */
