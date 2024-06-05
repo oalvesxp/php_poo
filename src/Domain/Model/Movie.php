@@ -9,31 +9,17 @@ Class Movie
 
     /** Construtor da classe filme */
     public function __construct(
-        private ?int $id,
-        private string $name,
-        private ?int $release,
-        private Genre $genre,
+        public readonly ?int $id,
+        public readonly string $name,
+        public readonly ?int $release,
+        public readonly Genre $genre,
         public readonly ?int $timeMin
         )
     {
-        $this->id = $id;
-        $this->name = $name;
-        $this->release = $release;
-        $this->genre = $genre;
         $this->rates = [];
     }
 
     /** Getters */
-    public function getName(): string
-    {
-        return $this->name;
-    }
-
-    public function getRelease(): ?int
-    {
-        return $this->release;
-    }
-
     public function getGenre(): string
     {
         return $this->genre->value;
