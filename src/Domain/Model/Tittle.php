@@ -37,4 +37,10 @@ class Tittle
 
         return $sum / $count;
     }
+
+    /** Retorna a duração do Título */
+    public function timeDuration(): int
+    {
+        return 0;
+    }
 }

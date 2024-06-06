@@ -19,4 +19,10 @@ Class Movie extends Tittle
             $genre
         );
     }
+
+    /** Retorna a duação do Filme */
+    public function timeDuration(): int
+    {
+        return $this->timeMin;
+    }
 }

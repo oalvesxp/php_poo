@@ -21,4 +21,10 @@ class Serie extends Tittle
             $genre
         );
     }
+
+    /** Calcula a duração da Série */
+    public function timeDuration(): int
+    {
+        return $this->seasons * $this->episodesPerSeason * $this->episodeDuration;
+    }
 }
