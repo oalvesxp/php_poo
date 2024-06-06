@@ -2,15 +2,17 @@
 
 namespace Locadora\Poo\Domain\Model;
 
-Class Movie extends Tittle
+class Serie extends Tittle
 {
-    /** Construtor da classe Filme */
+    /** Construtor da classe Série */
     public function __construct(
         ?int $id,
         string $name,
         ?int $release,
         Genre $genre,
-        public readonly ?int $timeMin,
+        public readonly ?int $seasons,
+        public readonly ?int $episodesPerSeason,
+        public readonly ?int $episodeDuration,
     ) {
         parent::__construct(
             $id,
@@ -20,9 +22,9 @@ Class Movie extends Tittle
         );
     }
 
-    /** Retorna a duação do Filme */
+    /** Calcula a duração da Série */
     public function timeDuration(): int
     {
-        return $this->timeMin;
+        return $this->seasons * $this->episodesPerSeason * $this->episodeDuration;
     }
 }
