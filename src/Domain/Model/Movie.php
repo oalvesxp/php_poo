@@ -2,6 +2,8 @@
 
 namespace Locadora\Poo\Domain\Model;
 
+use Override;
+
 Class Movie extends Tittle
 {
     /** Construtor da classe Filme */
@@ -21,6 +23,7 @@ Class Movie extends Tittle
     }
 
     /** Retorna a duação do Filme */
+    #[Override]
     public function timeDuration(): int
     {
         return $this->timeMin;

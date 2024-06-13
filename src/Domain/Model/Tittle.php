@@ -2,7 +2,7 @@
 
 namespace Locadora\Poo\Domain\Model;
 
-class Tittle 
+abstract class Tittle 
 {
     /** Avaliações */
     private array $rates;
@@ -39,8 +39,5 @@ class Tittle
     }
 
     /** Retorna a duração do Título */
-    public function timeDuration(): int
-    {
-        return 0;
-    }
+    abstract public function timeDuration(): int;
 }
