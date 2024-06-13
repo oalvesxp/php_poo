@@ -2,8 +2,9 @@
 
 namespace Locadora\Poo\Domain\Model;
 
-use Locadora\Poo\Domain\Model\Serie;
-use Locadora\Poo\Domain\Model\Assessment;
+use Locadora\Poo\Domain\Model\{
+    Serie, Assessment
+};
 
 class Episode implements Assessment
 {

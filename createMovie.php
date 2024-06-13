@@ -1,8 +1,10 @@
 <?php
 
 use Locadora\Poo\Domain\Calc\RateNumToStars;
-use Locadora\Poo\Domain\Model\Genre;
-use Locadora\Poo\Domain\Model\Movie;
+use Locadora\Poo\Domain\Model\{
+    Genre, Movie
+};
+
 require_once 'vendor/autoload.php';
 
 $filme = new Movie(

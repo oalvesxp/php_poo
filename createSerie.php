@@ -1,8 +1,8 @@
 <?php
 
-use Locadora\Poo\Domain\Model\Episode;
-use Locadora\Poo\Domain\Model\Genre;
-use Locadora\Poo\Domain\Model\Serie;
+use Locadora\Poo\Domain\Model\{
+    Episode, Genre, Serie
+};
 use Locadora\Poo\Domain\Calc\RateNumToStars;
 
 require_once 'vendor/autoload.php';
