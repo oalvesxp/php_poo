@@ -2,7 +2,7 @@
 
 namespace Locadora\Poo\Domain\Model;
 
-use InvalidArgumentException;
+use Locadora\Poo\Domain\Exception\InvalidRateException;
 
 trait withRating
 {
@@ -10,12 +10,12 @@ trait withRating
 
     /** Recebe avaliações do Título */
     /**
-     * @throws InvalidArgumentException Se a nota for negativa ou maior que 10
+     * @throws InvalidRateException Se a nota for negativa ou maior que 10
      */
     public function rate(float $grade): void
     {
         if ($grade < 0 || $grade > 10) {
-            throw new InvalidArgumentException('A nota precisa ser entre 0 e 10');
+            throw new InvalidRateException();
         }
 
         $this->rates[] = $grade;
