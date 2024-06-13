@@ -21,6 +21,7 @@ Class Movie extends Tittle
     }
 
     /** Retorna a duação do Filme */
+    #[\Override]
     public function timeDuration(): int
     {
         return $this->timeMin;

@@ -1,7 +1,10 @@
 <?php
 
-use Locadora\Poo\Domain\Model\Genre;
-use Locadora\Poo\Domain\Model\Movie;
+use Locadora\Poo\Domain\Calc\RateNumToStars;
+use Locadora\Poo\Domain\Model\{
+    Genre, Movie
+};
+
 require_once 'vendor/autoload.php';
 
 $filme = new Movie(
@@ -24,3 +27,6 @@ echo "Ano de Lançamento: {$filme->release}" . PHP_EOL;
 echo "Genêro: {$filme->getGenre()}" . PHP_EOL;
 echo "Recomendação: {$filme->average()}/10" . PHP_EOL;
 echo "Duração: {$filme->timeMin} Minutos" . PHP_EOL;
+
+$convert = new RateNumToStars();
+echo $convert->convert($filme) . " Estrelas";

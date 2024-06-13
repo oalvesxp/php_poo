@@ -23,6 +23,7 @@ class Serie extends Tittle
     }
 
     /** Calcula a duração da Série */
+    #[\Override]
     public function timeDuration(): int
     {
         return $this->seasons * $this->episodesPerSeason * $this->episodeDuration;
