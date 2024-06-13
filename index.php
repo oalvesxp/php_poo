@@ -10,5 +10,14 @@ require_once 'vendor/autoload.php';
 $serie = new Serie(null, 'X-Man 97', 2024, Genre::Animation, 1 , 8, 35);
 $episodio = new Episode($serie, 'O começo', 1);
 
-$conversor = new RateNumToStars();
-echo "Avaliação: " . $conversor->convert($episodio) . " Estrelas";
+try {
+    
+    $episodio->rate(10);
+    $episodio->rate(-1);
+
+    $conversor = new RateNumToStars();
+    echo "Avaliação: " . $conversor->convert($episodio) . " Estrelas";
+
+} catch(Exception $e) {
+    echo "Ocorreu um problema: " . $e->getMessage();
+}
