@@ -9,4 +9,5 @@ enum Genre: string
     case Horror = 'Terror';
     case SuperHero = 'Super-Herói';
     case Drama = 'Drama';
+    case Animation = 'Animation';
 } 
