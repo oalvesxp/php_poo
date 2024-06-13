@@ -2,8 +2,6 @@
 
 namespace Locadora\Poo\Domain\Model;
 
-use Override;
-
 class Serie extends Tittle
 {
     /** Construtor da classe Série */
@@ -25,7 +23,7 @@ class Serie extends Tittle
     }
 
     /** Calcula a duração da Série */
-    #[Override]
+    #[\Override]
     public function timeDuration(): int
     {
         return $this->seasons * $this->episodesPerSeason * $this->episodeDuration;

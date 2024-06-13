@@ -2,27 +2,20 @@
 
 namespace Locadora\Poo\Domain\Model;
 
+use Locadora\Poo\Domain\Model\Serie;
 use Locadora\Poo\Domain\Model\Assessment;
 
-abstract class Tittle implements Assessment
+class Episode implements Assessment
 {
-    /** Avaliações */
     private array $rates;
 
-    /** Construtor da classe Título */
     public function __construct(
-        public readonly ?int $id,
+        public readonly Serie $serie,
         public readonly string $name,
-        public readonly ?int $release,
-        public readonly Genre $genre,
-    ) {
-        $this->rates = [];
-    }
-
-    /** Getters */
-    public function getGenre(): string
+        public readonly int $number
+    )
     {
-        return $this->genre->value;
+        $this->rates = [];
     }
 
     /** Recebe avaliações do Título */
@@ -39,7 +32,4 @@ abstract class Tittle implements Assessment
 
         return $sum / $count;
     }
-
-    /** Retorna a duração do Título */
-    abstract public function timeDuration(): int;
 }

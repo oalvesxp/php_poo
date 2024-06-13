@@ -1,7 +1,10 @@
 <?php
 
+use Locadora\Poo\Domain\Model\Episode;
 use Locadora\Poo\Domain\Model\Genre;
 use Locadora\Poo\Domain\Model\Serie;
+use Locadora\Poo\Domain\Calc\RateNumToStars;
+
 require_once 'vendor/autoload.php';
 
 $serie = new Serie(
@@ -12,6 +15,12 @@ $serie = new Serie(
     5,
     13,
     47
+);
+
+$episode = new Episode(
+    $serie,
+    'Pilot',
+    1
 );
 
 $serie->rate(10);
@@ -28,3 +37,6 @@ echo "Recomendação: {$serie->average()}/10" . PHP_EOL;
 echo "Temporadas: {$serie->seasons}" . PHP_EOL;
 echo "Episódeos (p/ Temporada): {$serie->episodesPerSeason}" . PHP_EOL;
 echo "Média de Duração: {$serie->episodeDuration} Minutos" . PHP_EOL;
+
+$convert = new RateNumToStars();
+echo $convert->convert($serie) . " Estrelas";
